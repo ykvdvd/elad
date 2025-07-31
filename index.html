@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EILAD MEIRI +</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+        <a href="index.html"><h1>E.M. <span class="plus">+</span></h1></a>
+        <a href="projects.html"><div class="top-link">Projects</div></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="description">
+      <p>
+        The leading principle of our company is working simultaneously in multiple architectural scales. By doing so we are formulating an architecture that is based on structural continuity of the human scale – private houses, public buildings, urban public spaces and land-use planing. Our aspiration is deepening into the structural modulation in order to develop and fulfil a planing method which is able to deal with today’s uncertainty related to building processes, creating a generous human environment.
+      </p>
+    </section>
+
+    <section class="image-section">
+      <!-- <img src="./images/dummy-image-1.avif" alt="Architecture view"/> -->
+      
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/dummy-image-1.avif" alt="Architecture view"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/dummy-image-2.avif" alt="Architecture view"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/dummy-image-3.avif" alt="Architecture view"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/dummy-image-4.avif" alt="Architecture view"/>
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+        </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <a href="mailto:eladlightm@gmail.com">eladlightm@gmail.com</a>
+      <span>Adress: Yad Harutzim 4, Jerusalem</span>
+      <span>Post code: 10312</span>
+      <span>Phone: +972 54-490-9402</span>
+    </div>
+  </footer>
+</body>
+
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+     loop: true, // 🔁 Infinite loop
+    effect: 'fade', // ✨ Fade effect instead of sliding
+    fadeEffect: {
+      crossFade: true, // smoother transition
+    },
+    autoplay: {
+      delay: 2500, // ⏱ Time between transitions (ms)
+      disableOnInteraction: false,
+    },
+    speed: 1000, // 🕐 Fade transition speed (ms)
+    });
+  </script>
+</html>
