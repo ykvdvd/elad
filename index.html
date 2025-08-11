@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>EILAD MEIRI +</title>
+    <title>EILAD MEIRI</title>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
     <div class="top-bar">
-        <a href="index.html"><h1>E.M. <span class="plus">+</span></h1></a>
+        <a href="index.html"><h1>EILAD MEIRI</h1></a>
+        <a href="about.html"><div class="top-link" style="color:black;">About</div></a>
         <a href="projects.html"><div class="top-link">Projects</div></a>
     </div>
   </header>
@@ -25,19 +30,19 @@
     <section class="image-section">
       <!-- <img src="./images/dummy-image-1.avif" alt="Architecture view"/> -->
       
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" style="height: 600px;">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./images/dummy-image-1.avif" alt="Architecture view"/>
+                    <img data-fancybox="gallery" src="./images/2025 - The Heart and The Spring/HeartandSpring4.png" alt="Architecture view"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/dummy-image-2.avif" alt="Architecture view"/>
+                    <img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonumentM1.JPG" alt="Architecture view"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/dummy-image-3.avif" alt="Architecture view"/>
+                    <img data-fancybox="gallery" src="./images/2023 - Troubed Water/TroubledWaterM1.png" alt="Architecture view"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./images/dummy-image-4.avif" alt="Architecture view"/>
+                    <img data-fancybox="gallery" src="./images/2025 - The Heart and The Spring/HeartandSpringM8.JPG" alt="Architecture view"/>
                 </div>
             </div>
             <!-- <div class="swiper-button-next"></div>
@@ -50,13 +55,15 @@
   <footer>
     <div class="footer-info">
       <a href="mailto:eladlightm@gmail.com">eladlightm@gmail.com</a>
-      <span>Adress: Yad Harutzim 4, Jerusalem</span>
-      <span>Post code: 10312</span>
-      <span>Phone: +972 54-490-9402</span>
+      <span>Jerusalem, Israel</span>
+      <span>+972-54-490-9402</span>
+      <span>All Rights Reserved</span>
     </div>
   </footer>
 </body>
 
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -72,7 +79,19 @@
       delay: 2500, // ⏱ Time between transitions (ms)
       disableOnInteraction: false,
     },
+    zoom: {
+      maxRatio: 2, // zoom level
+    },
     speed: 1000, // 🕐 Fade transition speed (ms)
-    });
+    }
+  );
+
+     // Initialize Fancybox
+  Fancybox.bind("[data-fancybox='gallery']", {
+    Thumbs: false,
+    Toolbar: {
+      display: ["zoom", "close"]
+    }
+  });
   </script>
 </html>

@@ -58,13 +58,24 @@ a {
 }
 
 footer {
-  margin: 20px 0;
+  /* margin: 20px 0;
   border-top: 1px solid #ccc;
   padding: 15px 0;
   font-size: 0.85rem;
   position: absolute;
   bottom: 0;
+  width: 100%; */
+  background: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 50px;
+  padding-top: 40px;
 }
 
 .footer-info {
@@ -86,6 +97,7 @@ footer {
 .swiper {
     width: 100%;
     height: 100%;
+    /* height: 500px; */
 }
 
 .swiper-slide {
@@ -101,4 +113,30 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+ .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+  }
+
+  /* Auto zoom effect for popup */
+  .fancybox__content img {
+    transform: scale(1.05); /* start zoom */
+    transition: transform 0.4s ease;
+  }
+  .fancybox__container.is-open .fancybox__content img {
+    transform: scale(1); /* animate to normal size */
+  }
+
+.section {
+    margin-bottom: 25px;
+}
+.contact {
+    margin-bottom: 15px;
+}
+.key-skills ul {
+    list-style-type: square;
 }
