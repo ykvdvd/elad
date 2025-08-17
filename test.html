@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Project Viewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .project-info {
+      padding: 20px;
+      border: 1px solid #ddd;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    .swiper { width: 100%; height: auto; }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    nav a { margin-right: 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+        <a href="index.html" class="name-logo"><h1>Elad Meiri Architecture</h1></a>
+        <a href="about.html"><div class="top-link" style="color:black;">About</div></a>
+        <a href="projects.html"><div class="top-link">Projects</div></a>
+    </div>
+  </header>
+<main style="margin-bottom: 150px;max-width: 900px;margin: 0 auto;">
+
+<nav style="max-width: 1200px;margin: auto;">
+  <a href="#" class="project-link" data-project="troubled-water">Troubled Water</a>
+  <a href="#" class="project-link" data-project="emergence-of-light">Emergence of Light</a>
+  <a href="#" class="project-link" data-project="perfect-day-monument">Perfect Day Monument</a>
+  <a href="#" class="project-link" data-project="the-heart-&-the-spring">The Heart & The Spring</a>
+</nav>
+
+<div class="container">
+  <!-- Project Info -->
+  <div id="project-info" class="project-info">
+    <h2></h2>
+    <p></p>
+  </div>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper" style="max-height: 600px !important;">
+    <div class="swiper-wrapper" id="swiper-wrapper"></div>
+     <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument1.png" /></div>
+            </div>
+            <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument2.png" /></div>
+            </div>
+            <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument3.png" /></div>
+            </div>
+            <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument4.png" /></div>
+            </div>
+                <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument5.png" /></div>
+            </div>
+            <div class="swiper-slide">
+            <div class="swiper-zoom-container"><img data-fancybox="gallery" src="./images/2024 - Perfect Day Monument/PerfectDayMonument6.png" /></div>
+            </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="footer-info">
+      <a href="mailto:Eladlightm@gmail.com">Eladlightm@gmail.com</a>
+      <span>Adress: Yad Harutzim 4, Jerusalem</span>
+      <span>Post code: 10312</span>
+      <span>Phone: +972 54-490-9402</span>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script>
+const projects = {
+  "troubled-water": {
+    title: "Troubled Water",
+    description: "A project seeking to respond architecturally and morally to the ongoing war in Ukraine, located above and below the grounds of the ruined Soviet-era steel plant Azovstal, Mariupol, on the shores of the Sea of Azov. Below ground, an urban atomic bomb shelter; At ground level, the ruins remain untouched, echoing the collective trauma; Above ground – strata of intensive high-rises.",
+    images: ["./images/2023 - Troubled Water/TroubledWater1.png", "./images/2023 - Troubled Water/TroubledWater2.png", "./images/2023 - Troubled Water/TroubledWater3.png", "./images/2023 - Troubled Water/TroubledWaterM1.png"]
+  },
+  "emergence-of-light": {
+    title: "Emergence of Light",
+    description: "Light is, on the one hand, an inherent and essential quality of a place, and yet it is not fixed like wood or stone, its nature never predictable with absolute precision. The site is a craftsmen block intended for preservation in south Tel Aviv. Using parametric tools, the project examines the behavior of natural and artificial light inside the block and wishes to regain to the site some of its integral original qualities.",
+    images: ["https://picsum.photos/id/1018/600/400", "https://picsum.photos/id/1025/600/400"]
+  },
+  "perfect-day-monument": {
+    title: "Perfect Day Monument",
+    description: `“Art involves choice, and everything that man does, he does in art.”
+The abandoned Nesher quarry in the foot of Mount Carmel, encapsulates the issue of unfertile ground resulted by human exploitation; The project proposes a solution through another essential challenge of man – a community for the neglected. Through a recursive series of spatial and conceptual fragmentation, a potent city is to be built by and for its growing community of disabled people.`,
+    images: ["https://picsum.photos/id/1033/600/400"]
+  },
+  "the-heart-&-the-spring": {
+    title: "The Heart & The Spring",
+    description: "In the Third Machine Age, speed has been replaced by simultaneity. The functional and served human space is also flooded by data and information systems. And so, there is a need for an appropriate architectural structure that will also maintain human space. The project examines the application of the ‘von Neumann (computer) architecture’ to the physical space, in a proposed urban campus inside the Hebrew University in Givat Ram, Jerusalem.",
+    images: ["https://picsum.photos/id/1033/600/400"]
+  }
+};
+
+let swiper;
+
+function loadProject(projectKey) {
+  const project = projects[projectKey];
+  if (!project) return;
+
+  // Update text
+  document.querySelector("#project-info h2").textContent = project.title;
+  document.querySelector("#project-info p").textContent = project.description;
+
+  // Update images
+  const wrapper = document.getElementById("swiper-wrapper");
+  wrapper.innerHTML = "";
+  project.images.forEach((src, i) => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+    slide.innerHTML = `
+      <a data-fancybox="${projectKey}" href="${src}">
+        <img src="${src}" alt="${project.title} ${i+1}" />
+      </a>
+    `;
+    wrapper.appendChild(slide);
+  });
+
+  // Re-init swiper
+  if (swiper) swiper.destroy(true, true);
+  swiper = new Swiper(".mySwiper", {
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    loop: true,
+  });
+}
+
+// Load default project
+document.addEventListener("DOMContentLoaded", () => {
+  loadProject("troubled-water");
+});
+
+// Hook up nav clicks
+document.querySelectorAll(".project-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    loadProject(link.dataset.project);
+  });
+});
+</script>
+</body>
+</html>
